@@ -160,13 +160,12 @@ int main() {
             printf("--- STATUS ---\n");
             printf("Pacotes recebidos: %lu\n", packet_count);
             printf("Erros: %lu\n", error_count);
-            printf("Taxa de sucesso: %.1f%%\n", 
+            printf("Taxa de sucesso: %.1f%%\n",
                    packet_count > 0 ? (100.0f * packet_count) / (packet_count + error_count) : 0.0f);
             printf("Aguardando próximo pacote...\n\n");
             last_status_time = current_time;
         }
-        
-        // Pequena pausa para não sobrecarregar o processador
+    
         sleep_ms(50);
     }
     
